@@ -1,5 +1,15 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
+### ApacheCordova ###
+# Apache Cordova generated files and directories
+bin/*
+!/plugins
+!/plugins/android.json
+!/plugins/fetch.json
+plugins/*
+platforms/*
+
+### Ember ###
 # compiled output
 /dist
 /tmp
