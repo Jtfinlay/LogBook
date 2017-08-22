@@ -32,6 +32,9 @@ export default Ember.Component.extend({
             this.sendAction("updateRecordedTime", duration);
             this.set("isRunning", false);
             this.set("lastTimeStamp", 0);
+            if (reset) {
+                this.set("duration", 0);
+            }
         }
     },
 
