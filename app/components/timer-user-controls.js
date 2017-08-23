@@ -5,6 +5,10 @@ export default Ember.Component.extend({
     duration: 0,
     isRunning: false,
 
+    showSubmitButton: Ember.computed("isRunning", function() {
+        return (this.get("duration") > 0 && !this.get("isRunning"));
+    }),
+
     run: function() {
         let self = this;
         let lastTimeStamp = this.get("lastTimeStamp");
@@ -35,6 +39,10 @@ export default Ember.Component.extend({
             if (reset) {
                 this.set("duration", 0);
             }
+        },
+
+        submitTime: function() {
+            let timeValue = this.get("duration");
         }
     },
 
