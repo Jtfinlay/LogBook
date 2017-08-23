@@ -11,7 +11,7 @@ export default Ember.Component.extend({
         this.set("timerId", Ember.run.later(this, function() {
             let duration = this.get("duration");
             duration += Date.now() - lastTimeStamp;
-            lastTimeStamp = Date.now();
+            self.set('lastTimeStamp', Date.now());
             self.set("duration", duration);
             self.run();
         }, 25));

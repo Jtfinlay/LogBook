@@ -1,4 +1,4 @@
-<p class="duration">{{ duration }}</p>
+<p class="duration">{{ format-datetime duration "MM:SS.sss" }}</p>
 {{#if isRunning}}
 <button class="stopbutton" type="submit" class="btn btn-sm btn-default" {{action "stop"}}>Stop</button>
 {{else}}

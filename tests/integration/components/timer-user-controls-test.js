@@ -8,7 +8,7 @@ moduleForComponent('timer-user-controls', 'Integration | Component | timer user 
 test('start/stop action should switch the start/stop buttons', function(assert) {
     this.render(hbs`{{timer-user-controls}}`);
 
-    assert.equal(this.$('.duration').text(), 0);
+    assert.equal(this.$('.duration').text(), "00:00.000");
     assert.equal(this.$('.startbutton').length, 1);
     assert.equal(this.$('.stopbutton').length, 0);
     assert.equal(this.$('.startbutton').text(), 'Start');
