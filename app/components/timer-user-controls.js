@@ -42,7 +42,7 @@ export default Ember.Component.extend({
         },
 
         submitTime: function() {
-            let timeValue = this.get("duration");
+            
         }
     },
 
