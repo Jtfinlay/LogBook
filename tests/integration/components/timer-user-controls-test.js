@@ -2,24 +2,26 @@ import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
 moduleForComponent('timer-user-controls', 'Integration | Component | timer user controls', {
-  integration: true
+    integration: true
 });
 
-test('it renders', function(assert) {
+test('start/stop action should switch the start/stop buttons', function(assert) {
+    this.render(hbs`{{timer-user-controls}}`);
 
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+    assert.equal(this.$('.duration').text(), 0);
+    assert.equal(this.$('.startbutton').length, 1);
+    assert.equal(this.$('.stopbutton').length, 0);
+    assert.equal(this.$('.startbutton').text(), 'Start');
 
-  this.render(hbs`{{timer-user-controls}}`);
+    this.$('.startbutton').click();
 
-  assert.equal(this.$().text().trim(), '0\nStart\nReset');
+    assert.equal(this.$('.startbutton').length, 0);
+    assert.equal(this.$('.stopbutton').length, 1);
+    assert.equal(this.$('.stopbutton').text(), 'Stop');
 
-  // Template block usage:
-  this.render(hbs`
-    {{#timer-user-controls}}
-      template block text
-    {{/timer-user-controls}}
-  `);
+    this.$('.stopbutton').click();
 
-  assert.equal(this.$().text().trim(), '0\nStart\nReset');
+    assert.equal(this.$('.startbutton').length, 1);
+    assert.equal(this.$('.stopbutton').length, 0);
+    assert.equal(this.$('.startbutton').text(), 'Start');
 });

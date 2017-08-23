@@ -1,7 +1,7 @@
-<p>{{ duration }}</p>
+<p class="duration">{{ duration }}</p>
 {{#if isRunning}}
-<button type="submit" class="btn btn-sm btn-default" {{action "stop"}}>Stop</button>
+<button class="stopbutton" type="submit" class="btn btn-sm btn-default" {{action "stop"}}>Stop</button>
 {{else}}
-<button type="submit" class="btn btn-sm btn-default" {{action "start"}}>Start</button>
+<button class="startbutton" type="submit" class="btn btn-sm btn-default" {{action "start"}}>Start</button>
 {{/if}}
-<button type="submit" class="btn btn-sm btn-default" {{action "stop" true}}>Reset</button>
+<button class="resetbutton" type="submit" class="btn btn-sm btn-default" {{action "stop" true}}>Reset</button>
