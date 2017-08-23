@@ -2,6 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
     model() {
-        return times;
+        return this.get('store').findAll('timelog');
     }
 });

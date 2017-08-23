@@ -1,20 +1,29 @@
 export default function() {
     this.namespace = "/api";
 
-    this.get('/times', function() {
+    this.get('/timelogs', function() {
         return {
             data: [{
-                type: 'times',
-                timestamp: '1503461789441',
-                elapsedTime: '56000'
+                id: '0',
+                type: 'timelogs',
+                attributes: {
+                    timestamp: '1503461789441',
+                    elapsedtime: '56000'
+                }
             }, {
-                type: 'times',
-                timestamp: '1503458258870',
-                elapsedTime: '2000'
+                id: '1',
+                type: 'timelogs',
+                attributes: {
+                    timestamp: '1503458258870',
+                    elapsedtime: '2000'
+                }
             }, {
-                type: 'times',
-                timestamp: '1503375443983',
-                elapsedTime: '120000'
+                id: '2',
+                type: 'timelogs',
+                attributes: {
+                    timestamp: '1503375443983',
+                    elapsedtime: '120000'
+                }
             }]
         };
     });
