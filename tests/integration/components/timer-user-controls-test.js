@@ -11,17 +11,14 @@ test('start/stop action should switch the start/stop buttons', function(assert) 
     assert.equal(this.$('.duration').text(), "00:00.000");
     assert.equal(this.$('.startbutton').length, 1);
     assert.equal(this.$('.stopbutton').length, 0);
-    assert.equal(this.$('.startbutton').text(), 'Start');
 
     this.$('.startbutton').click();
 
     assert.equal(this.$('.startbutton').length, 0);
     assert.equal(this.$('.stopbutton').length, 1);
-    assert.equal(this.$('.stopbutton').text(), 'Stop');
 
     this.$('.stopbutton').click();
 
     assert.equal(this.$('.startbutton').length, 1);
     assert.equal(this.$('.stopbutton').length, 0);
-    assert.equal(this.$('.startbutton').text(), 'Start');
 });

@@ -1,7 +1,16 @@
-<p class="duration">{{ format-datetime duration "MM:SS.sss" }}</p>
+<div class="circle">
+    <h2 class="duration">{{ format-datetime duration "MM:SS.sss" }}</h2>
+</div>
+
 {{#if isRunning}}
-<button class="stopbutton" type="submit" class="btn btn-sm btn-default" {{action "stop"}}>Stop</button>
+<button class="btn btn-primary btn-lg stopbutton" type="submit" {{action "stop"}}>
+    <span class="glyphicon glyphicon-pause"></span>
+</button>
 {{else}}
-<button class="startbutton" type="submit" class="btn btn-sm btn-default" {{action "start"}}>Start</button>
+<button class="btn btn-primary btn-lg startbutton" type="submit" {{action "start"}}>
+    <span class="glyphicon glyphicon-play"></span>
+</button>
 {{/if}}
-<button class="resetbutton" type="submit" class="btn btn-sm btn-default" {{action "stop" true}}>Reset</button>
+<button class="btn btn-primary btn-lg resetbutton" type="submit" {{action "stop" true}}>
+    <span class="glyphicon glyphicon-repeat"></span>
+</button>

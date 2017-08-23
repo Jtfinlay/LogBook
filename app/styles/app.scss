@@ -1,1 +1,26 @@
 @import "ember-bootstrap/bootstrap";
+
+$circleDiameter: 300px;
+
+.timercontrol {
+    text-align: center;
+}
+
+.circle {
+    width: $circleDiameter;
+    height: $circleDiameter;
+    border-radius: 50%;
+    background: transparent;
+    border: 4px solid lightgrey;
+
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+
+.circle h2 {
+    line-height: $circleDiameter;
+    margin: 0;
+    font-size: 50px;
+}
