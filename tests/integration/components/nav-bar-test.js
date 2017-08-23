@@ -12,7 +12,7 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{nav-bar}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(this.$().text().replace(/(\r\n|\n|\r)/gm,"").replace(/ +/g, ' ').trim(), 'Toggle navigation LogBook About');
 
   // Template block usage:
   this.render(hbs`
@@ -21,5 +21,5 @@ test('it renders', function(assert) {
     {{/nav-bar}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text().replace(/(\r\n|\n|\r)/gm,"").replace(/ +/g, ' ').trim(), 'Toggle navigation LogBook About');
 });

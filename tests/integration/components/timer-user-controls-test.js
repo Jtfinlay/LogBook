@@ -12,7 +12,7 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{timer-user-controls}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(this.$().text().trim(), '0\nStart\nReset');
 
   // Template block usage:
   this.render(hbs`
@@ -21,5 +21,5 @@ test('it renders', function(assert) {
     {{/timer-user-controls}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text().trim(), '0\nStart\nReset');
 });

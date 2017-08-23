@@ -6,12 +6,21 @@ moduleForComponent('format-datetime', 'helper:format-datetime', {
   integration: true
 });
 
-// Replace this with your real tests.
-test('it renders', function(assert) {
-  this.set('inputValue', '1234');
+test('format mm:ss time', function(assert) {
+  this.set('ms', '100000');
+  this.set('format', 'MM:SS');
 
-  this.render(hbs`{{format-datetime inputValue}}`);
+  this.render(hbs`{{format-datetime ms format}}`);
 
-  assert.equal(this.$().text().trim(), '1234');
+  assert.equal(this.$().text().trim(), '01:40');
+});
+
+test('format hh:mm:ss time', function(assert) {
+  this.set('ms', '10000000');
+  this.set('format', 'HH:MM:SS');
+
+  this.render(hbs`{{format-datetime ms format}}`);
+
+  assert.equal(this.$().text().trim(), '02:46:40');
 });
 
