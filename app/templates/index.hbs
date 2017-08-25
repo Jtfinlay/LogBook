@@ -1,14 +1,14 @@
-<div class="jumbotron">
-  <div class="container">
+<div class='jumbotron'>
+  <div class='container'>
     <h1>LogBook</h1>
     <p>This simple application is designed to help you keep track of relevant... logs.</p>
   </div>
 </div>
 
-<div class="container">
+<div class='container'>
 
-  <div class="container timercontrol">
-    {{ timer-user-controls }}
+  <div class='container timercontrol'>
+    {{ timer-user-controls onSubmit=(action 'submitTime') }}
   </div>
 
   <hr>
