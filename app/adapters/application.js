@@ -1,5 +1,9 @@
 import DS from 'ember-data';
 
 export default DS.JSONAPIAdapter.extend({
-    namespace: 'api'
+    host: 'https://apilogbook.azurewebsites.net',
+    namespace: 'tables',
+    headers: {
+        'ZUMO-API-VERSION': '2.0.0'
+    }
 });
