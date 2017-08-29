@@ -1,29 +1,25 @@
 export default function() {
     this.namespace = "/api";
 
-    this.get('/timelogs', function() {
+    this.get('https://apilogbook.azurewebsites.net/tables/timelogs', function() {
         return {
             data: [{
-                id: '0',
-                type: 'timelogs',
-                attributes: {
-                    timestamp: '1503461789441',
-                    elapsedtime: '56000'
-                }
-            }, {
-                id: '1',
-                type: 'timelogs',
-                attributes: {
-                    timestamp: '1503458258870',
-                    elapsedtime: '2000'
-                }
-            }, {
-                id: '2',
-                type: 'timelogs',
-                attributes: {
-                    timestamp: '1503375443983',
-                    elapsedtime: '120000'
-                }
+                "timestamp": 1503461789441,
+                "elapsedtime": 356000,
+                "id": "70257a51-bda4-4ce0-9c8b-7e68644c301f",
+                "createdAt": "2017-08-27T22:50:36.137Z",
+                "updatedAt": "2017-08-27T22:50:36.137Z",
+                "version": "MQ==",
+                "deleted": false
+            },
+            {
+                "timestamp": 1503458258870,
+                "elapsedtime": 23000,
+                "id": "ab912f38-09e0-4e63-aad9-f696aeb33c97",
+                "createdAt": "2017-08-27T22:50:36.137Z",
+                "updatedAt": "2017-08-27T22:50:36.137Z",
+                "version": "MQ==",
+                "deleted": false
             }]
         };
     });
