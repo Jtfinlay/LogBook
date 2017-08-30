@@ -1,23 +1,24 @@
 import DS from 'ember-data';
 
 export default DS.JSONAPISerializer.extend({
-    serialize(snapshot, options) {
+    serialize( ) {
         var json = this._super(...arguments);
         return json;
     },
-    normalizeResponse(store, primaryModelClass, payload, id, requestType) {
-        for (var index = 0; index < payload.data.length; ++index)
+    normalizeResponse(store, primaryModelClass, payload) {
+        payload.data = [];
+        for (var index = 0; index < payload.length; ++index)
         {
-            let data = payload.data[index];
-            payload.data[index] = {attributes: data};
-            payload.data[index].id = data.id;
-            payload.data[index].type = "timelog";
+            let data = payload[index];
+            payload.data[index] = {
+                attributes: data,
+                id: data.id,
+                type: "timelog"
+            };
         }
-        
-        let json = this._super(...arguments);
-        return json;
+        return this._super(...arguments);
     },
-    keyForAttribute(attr, method) {
+    keyForAttribute(attr) {
         return attr;
     }
 });

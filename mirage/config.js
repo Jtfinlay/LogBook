@@ -2,8 +2,7 @@ export default function() {
     this.namespace = "/api";
 
     this.get('https://apilogbook.azurewebsites.net/tables/timelogs', function() {
-        return {
-            data: [{
+        return [{
                 "timestamp": 1503461789441,
                 "elapsedtime": 356000,
                 "id": "70257a51-bda4-4ce0-9c8b-7e68644c301f",
@@ -20,7 +19,6 @@ export default function() {
                 "updatedAt": "2017-08-27T22:50:36.137Z",
                 "version": "MQ==",
                 "deleted": false
-            }]
-        };
+            }];
     });
 }
