@@ -6,7 +6,7 @@
 
 {{#each model as |timelog|}}
     <article>
-        <h3>{{ timelog.timestampReadable }}</h3>
-        <div class="detail">{{ format-datetime timelog.elapsedtime "MM:SS.sss" }}</div>
+        <h3>{{ timelog.createdAt }}</h3>
+        <div class="detail">{{  format-datetime timelog.elapsedtime "MM:SS.sss" }}</div>
     </article>
 {{/each}}

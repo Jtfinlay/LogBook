@@ -3,7 +3,7 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
     type: DS.attr(),
-    timestamp: DS.attr('number'),
+    createdAt: DS.attr('date'),
     elapsedtime: DS.attr('number'),
 
     timestampReadable: Ember.computed('timestamp', function() {
