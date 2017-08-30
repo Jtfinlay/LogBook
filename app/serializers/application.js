@@ -1,8 +1,11 @@
 import DS from 'ember-data';
 
 export default DS.JSONAPISerializer.extend({
-    serialize( ) {
-        var json = this._super(...arguments);
+    serialize(snapshot, options) {
+        var json = {
+            createdAt: snapshot._attributes.createdAt,
+            elapsedtime: snapshot._attributes.elapsedtime
+        };
         return json;
     },
     normalizeResponse(store, primaryModelClass, payload) {
