@@ -8,7 +8,6 @@ export default function() {
                 "id": "70257a51-bda4-4ce0-9c8b-7e68644c301f",
                 "createdAt": "2017-08-27T22:50:36.137Z",
                 "updatedAt": "2017-08-27T22:50:36.137Z",
-                "version": "MQ==",
                 "deleted": false
             },
             {
@@ -17,7 +16,6 @@ export default function() {
                 "id": "ab912f38-09e0-4e63-aad9-f696aeb33c97",
                 "createdAt": "2017-08-27T22:50:36.137Z",
                 "updatedAt": "2017-08-27T22:50:36.137Z",
-                "version": "MQ==",
                 "deleted": false
             }];
     });
