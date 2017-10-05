@@ -1,6 +1,6 @@
 import { moduleForModel, test } from 'ember-qunit';
 
-moduleForModel('timelog', 'Unit | Model | timelog', {
+moduleForModel('log', 'Unit | Model | log', {
   // Specify the other units that are required for this test.
   needs: []
 });

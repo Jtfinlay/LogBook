@@ -4,12 +4,12 @@ export function formatDatetime(params/*, hash*/) {
     let milliseconds = params[0];
     let format = params[1];
 
-    let ms = milliseconds % 1000;
-    let seconds = milliseconds / 1000;
-    let h = Math.floor(seconds / (3600));
-    seconds = seconds % 3600;
-    let m = Math.floor(seconds / 60);
-    let s = Math.floor(seconds % 60);
+    let date = new Date(milliseconds);
+
+    let ms = date.getUTCMilliseconds();
+    let s = date.getUTCSeconds();
+    let m = date.getUTCMinutes();
+    let h = date.getUTCHours();
 
     h = h < 10 ? "0" + h : h;
     m = m < 10 ? "0" + m : m;

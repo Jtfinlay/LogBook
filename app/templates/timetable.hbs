@@ -4,9 +4,9 @@
   <p>We hope you find exactly what you're looking for in a place to stay.</p>
 </div>
 
-{{#each model as |timelog|}}
+{{#each model as |entry|}}
     <article>
-        <h3>{{ timelog.createdAt }}</h3>
-        <div class="detail">{{  format-datetime timelog.elapsedtime "MM:SS.sss" }}</div>
+        <h3>{{ entry.createdAt }}</h3>
+        <div class="detail">{{  format-datetime entry.elapsedTime "MM:SS.sss" }}</div>
     </article>
 {{/each}}
